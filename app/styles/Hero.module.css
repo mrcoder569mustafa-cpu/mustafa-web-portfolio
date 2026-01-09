@@ -1,0 +1,46 @@
+.hero {
+  position: relative;
+  height: 100px; 
+  display: flex;
+  align-items: center;
+  font-family: 'Poppins', sans-serif;
+  color: #fff;
+  font-size: 2rem;
+}
+
+.heroTitle {
+  position: relative;
+  display: inline-block;
+}
+
+/* Letter animation */
+.letter {
+  opacity: 0;
+  display: inline-block;
+  animation: neonType 0.8s forwards;
+  text-shadow: 0 0 5px, 0 0 10px, 0 0 20px, 0 0 40px, 0 0 80px;
+}
+
+/* Rainbow colors for words */
+.fullStack { color: #ff00ff; text-shadow: 0 0 5px #ff00ff,0 0 10px #ff00ff,0 0 20px #ff00ff,0 0 40px #ff00ff,0 0 80px #ff00ff; }
+.webDesigner { color: #00ffff; text-shadow: 0 0 5px #00ffff,0 0 10px #00ffff,0 0 20px #00ffff,0 0 40px #00ffff,0 0 80px #00ffff; }
+.coder { color: #ff9900; text-shadow: 0 0 5px #ff9900,0 0 10px #ff9900,0 0 20px #ff9900,0 0 40px #ff9900,0 0 80px #ff9900; }
+.uiux { color: #00ff00; text-shadow: 0 0 5px #00ff00,0 0 10px #00ff00,0 0 20px #00ff00,0 0 40px #00ff00,0 0 80px #00ff00; }
+
+/* Neon typewriter animation */
+@keyframes neonType {
+  0% { opacity: 0; transform: translateY(20px); }
+  50% { opacity: 1; transform: translateY(0); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Word fade out after typing */
+.fadeOut {
+  animation: fadeOut 1s forwards;
+  animation-delay: 2s; /* after word typed */
+}
+
+@keyframes fadeOut {
+  0% { opacity: 1; }
+  100% { opacity: 0; }
+}

@@ -1,0 +1,123 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ================================
+   GLOBAL RESET
+================================ */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  font-family: 'Inter', sans-serif;
+}
+
+/* ================================
+   SHADCN THEME TOKENS
+================================ */
+@layer base {
+  :root {
+    /* Light Mode */
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+
+    --primary: 200 100% 50%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 240 60% 63%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 0 0% 90%;
+    --muted-foreground: 222 84% 25%;
+
+    --accent: 200 100% 50%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 0 0% 90%;
+    --input: 0 0% 95%;
+    --ring: 200 100% 50%;
+
+    --radius: 0.5rem;
+
+    /* Hero Text Gradient */
+    --hero-gradient: linear-gradient(
+      90deg,
+      #06b6d4,
+      #3b82f6,
+      #a855f7
+    );
+  }
+
+  .dark {
+    /* Dark Mode */
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 200 100% 50%;
+    --primary-foreground: 0 0% 98%;
+
+    --secondary: 280 60% 63%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 240 5% 20%;
+    --muted-foreground: 210 40% 80%;
+
+    --accent: 200 100% 50%;
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 62% 30%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 240 5% 20%;
+    --input: 240 5% 20%;
+    --ring: 200 100% 50%;
+
+    --hero-gradient: linear-gradient(
+      90deg,
+      #22d3ee,
+      #60a5fa,
+      #c084fc
+    );
+  }
+
+  /* ================================
+     GLOBAL BODY STYLING
+     (Particle background safe)
+  ================================ */
+  body {
+    @apply bg-background text-foreground antialiased;
+    background: transparent;
+  }
+}
+
+/* ================================
+   CUSTOM UTILITIES
+================================ */
+@layer utilities {
+  .text-hero {
+    background: var(--hero-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .bg-grid-pattern {
+    background-size: 40px 40px;
+    opacity: 0.05;
+  }
+}

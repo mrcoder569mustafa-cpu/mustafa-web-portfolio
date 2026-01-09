@@ -1,0 +1,179 @@
+/* 🌟 Modern Neumorphism Navbar (Glass + Gradient + Shadow) */
+.neumorphism-navbar {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.3rem 10%;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  z-index: 1000;
+  transition: 0.4s ease;
+}
+
+.neumorphism-navbar.active {
+  background: rgba(17, 24, 39, 0.75);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* ✨ Logo */
+.logo {
+  font-size: 1.8rem;
+  font-weight: 800;
+  background: linear-gradient(90deg, #06b6d4, #3b82f6, #8b5cf6);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  letter-spacing: 0.5px;
+  transition: 0.3s ease;
+}
+
+.logo:hover {
+  transform: scale(1.05);
+  filter: brightness(1.2);
+}
+
+/* 🧭 Nav Links */
+.navbar ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.navbar ul li a {
+  position: relative;
+  text-decoration: none;
+  color: #f1f5f9;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  padding: 6px 10px;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.navbar ul li a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #06b6d4, #3b82f6, #8b5cf6);
+  transition: 0.3s ease;
+  transform: translateX(-50%);
+}
+
+.navbar ul li a:hover::after {
+  width: 100%;
+}
+
+.navbar ul li a:hover {
+  color: #ffffff;
+  text-shadow: 0 0 8px rgba(59, 130, 246, 0.8);
+}
+
+/* 🎨 Right Actions */
+.right-actions {
+  display: flex;
+  gap: 1.2rem;
+  align-items: center;
+}
+
+.theme-btn {
+  font-size: 1.3rem;
+  color: #f8fafc;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 8px 12px;
+  border-radius: 50%;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25),
+              -4px -4px 10px rgba(255, 255, 255, 0.15);
+  transition: 0.3s ease;
+}
+
+.theme-btn:hover {
+  transform: rotate(20deg);
+  background: linear-gradient(135deg, #06b6d4, #8b5cf6);
+  box-shadow: 0 0 10px rgba(139, 92, 246, 0.6);
+}
+
+.hire-btn {
+  background: linear-gradient(135deg, #06b6d4, #3b82f6, #8b5cf6);
+  color: white;
+  padding: 10px 18px;
+  font-weight: 600;
+  border-radius: 25px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 10px rgba(59, 130, 246, 0.5);
+}
+
+.hire-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 18px rgba(139, 92, 246, 0.7);
+}
+
+/* 🍔 Hamburger */
+#menu {
+  display: none;
+  font-size: 2rem;
+  color: #f1f5f9;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+#menu:hover {
+  transform: rotate(90deg);
+}
+
+/* 📱 Responsive */
+@media (max-width: 900px) {
+  #menu {
+    display: block;
+  }
+
+  .navbar {
+    position: fixed;
+    top: 5.5rem;
+    right: -120%;
+    background: rgba(15, 23, 42, 0.95);
+    width: 75%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 3rem;
+    backdrop-filter: blur(20px);
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+    transition: right 0.4s ease;
+  }
+
+  .navbar.nav-toggle {
+    right: 0;
+  }
+
+  .navbar ul {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .navbar ul li a {
+    font-size: 1.3rem;
+    color: #e2e8f0;
+  }
+
+  .navbar ul li a:hover {
+    color: #fff;
+    text-shadow: 0 0 10px #3b82f6;
+  }
+}
