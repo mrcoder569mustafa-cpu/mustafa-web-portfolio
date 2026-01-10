@@ -24,20 +24,30 @@ export default function Navbar() {
 
   useEffect(() => {
     setMounted(true);
-    const handleScroll = () => setScrolled(window.scrollY > 10);
+
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 10);
+    };
+
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   const toggleMenu = () => setIsOpen(!isOpen);
-  if (!mounted) return null;
+
+  // 🔥 Prevent black flash & layout jump
+  if (!mounted) {
+    return (
+      <header className="fixed top-0 left-0 w-full h-[72px] bg-white dark:bg-[#1E1E2F] z-50"></header>
+    );
+  }
 
   return (
     <motion.header
       initial={{ y: -100, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.6, ease: "easeOut" }}
-      className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 ${
+      className={`fixed top-0 left-0 w-full z-50 will-change-transform transition-all duration-300 ${
         scrolled
           ? "backdrop-blur-md bg-white/90 dark:bg-[#1E1E2F]/80 shadow-lg"
           : "bg-white dark:bg-[#1E1E2F]"
@@ -50,7 +60,9 @@ export default function Navbar() {
           className="text-2xl font-bold bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-600 bg-clip-text text-transparent"
         >
           Mustafa
-          <span className="font-light text-gray-700 dark:text-gray-300">Dev</span>
+          <span className="font-light text-gray-700 dark:text-gray-300">
+            Dev
+          </span>
         </Link>
 
         {/* Desktop Menu */}
@@ -67,19 +79,21 @@ export default function Navbar() {
           ))}
         </nav>
 
-        {/* Right Actions + Theme Toggle */}
+        {/* Right Actions */}
         <div className="hidden md:flex items-center space-x-4">
-          <a href="/contact">
-            <button
-              className="group relative inline-flex h-12 items-center justify-center overflow-hidden rounded-md border border-neutral-300 bg-transparent px-6 font-medium text-neutral-600 transition-all [box-shadow:0px_4px_1px_#a3a3a3] active:translate-y-[2px] active:shadow-none dark:border-neutral-600 dark:text-neutral-300 hover:bg-neutral-100 hover:dark:bg-neutral-700"
-            >
+          <Link href="/contact">
+            <button className="group relative inline-flex h-12 items-center justify-center overflow-hidden rounded-md border border-neutral-300 bg-transparent px-6 font-medium text-neutral-600 transition-all [box-shadow:0px_4px_1px_#a3a3a3] active:translate-y-[2px] active:shadow-none dark:border-neutral-600 dark:text-neutral-300 hover:bg-neutral-100 hover:dark:bg-neutral-700">
               Let's Connect
             </button>
-          </a>
+          </Link>
 
+          {/* Theme Toggle */}
           <button
-            onClick={() => setTheme(theme === "light" ? "dark" : "light")}
-            className="p-2 rounded-full border border-gray-400 dark:border-gray-600 hover:bg-gray-200 dark:hover:bg-gray-700 transition-all"
+            aria-label="Toggle Theme"
+            onClick={() =>
+              setTheme(theme === "light" ? "dark" : "light")
+            }
+            className="p-2 rounded-full border border-gray-400 dark:border-gray-600 hover:bg-gray-200 dark:hover:bg-gray-700 transition-all duration-300"
           >
             {theme === "light" ? (
               <Moon className="w-5 h-5 text-gray-800" />
@@ -116,12 +130,19 @@ export default function Navbar() {
               {link.label}
             </Link>
           ))}
-          <button className="w-full mt-2 border-0 bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-600 text-white font-semibold py-2 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 transform hover:scale-105">
-            Hire Me
-          </button>
+
+          <Link href="/contact">
+            <button className="w-full mt-2 bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-600 text-white font-semibold py-2 rounded-lg shadow-md hover:shadow-lg transition-all duration-300">
+              Hire Me
+            </button>
+          </Link>
+
+          {/* Theme Toggle Mobile */}
           <button
-            onClick={() => setTheme(theme === "light" ? "dark" : "light")}
-            className="mt-2 p-2 rounded-full border border-gray-400 dark:border-gray-600 hover:bg-gray-200 dark:hover:bg-gray-700 transition-all"
+            onClick={() =>
+              setTheme(theme === "light" ? "dark" : "light")
+            }
+            className="mt-3 p-2 rounded-full border border-gray-400 dark:border-gray-600 hover:bg-gray-200 dark:hover:bg-gray-700 transition-all duration-300"
           >
             {theme === "light" ? (
               <Moon className="w-5 h-5 text-gray-800" />

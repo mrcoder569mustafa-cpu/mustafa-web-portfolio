@@ -127,25 +127,26 @@ export default function Hero() {
             <span className={theme === "light" ? "text-gray-600" : "text-gray-300"}>
               I am a{" "}
             </span>
-            <span
-              className="font-bold bg-clip-text text-transparent"
-              style={{ backgroundImage: "var(--hero-gradient)" }}
-            >
-              <TypeAnimation
-                sequence={[
-                  " Junior Fullstack Developer",
-                  2000,
-                  "Frontend Developer",
-                  2000,
-                  "UI/UX Designer",
-                  2000,
-                  "Coder",
-                  2000,
-                ]}
-                speed={50}
-                repeat={Infinity}
-              />
-            </span>
+           <span
+  className="font-bold bg-clip-text text-transparent"
+  style={{ backgroundImage: "var(--hero-gradient)" }}
+>
+  <TypeAnimation
+    sequence={[
+      "Web Application Developer",
+      2000,
+      "MERN Stack Developer",
+      2000,
+      "Frontend Developer (React)",
+      2000,
+      "JavaScript Developer",
+      2000,
+    ]}
+    speed={45}
+    repeat={Infinity}
+  />
+</span>
+
           </h3>
 
           <p className="max-w-md leading-relaxed font-semibold text-gray-600 dark:text-gray-300">
