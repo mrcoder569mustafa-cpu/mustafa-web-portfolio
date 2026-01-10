@@ -1,39 +1,70 @@
-# mustafa-web-portfolio
-My personal developer portfolio built with Next.js, Tailwind CSS, and Framer Motion. Showcasing my projects, skills, and experience.
+# Mustafa Web Portfolio
 
+My personal developer portfolio built with **Next.js** and **Tailwind CSS**, showcasing my projects, skills, and experience.  
+This portfolio is designed for clients, recruiters, and collaborators to easily view my work and contact me.
 
-# Personal Portfolio (Next.js)
+---
 
-This is my personal portfolio website where I showcase my projects, skills, and contact details.
+##  Tech Stack
 
-## Tech Used
-- Next.js / React  
-- HTML, CSS, JavaScript  
-- Tailwind CSS  
-- ShadCN UI (forms & buttons)  
-- EmailJS (Contact form)  
-- Nodemailer (Hire Me — backend email)
+### Frontend
+- Next.js / React
+- HTML, CSS, JavaScript
+- Tailwind CSS
+- ShadCN UI (forms, buttons, UI components)
+- Framer Motion (animations)
 
-## Projects Included
-- Chatbot App  
-- MERN CRUD App  
-- E-Commerce Website  
+### Backend / Services
+- **EmailJS** → Contact Form
+- **Nodemailer** → Hire Me form (clients / HR can send emails directly)
 
-(Other projects are available on my GitHub profile)
+---
 
-## Features
-- Responsive design  
-- Clean and modern UI  
-- Live project links  
-- Contact and Hire-Me email options
+##  Projects Featured
 
-## Run Locally
+- **Chatbot App**
+- **MERN CRUD Application**
+- **E-Commerce Website**
+
+> Other projects are available on my GitHub profile.
+
+---
+
+##  Features
+
+- Fully responsive design
+- Clean & modern UI
+- Smooth animations
+- Live project links
+- Contact form using EmailJS
+- Hire Me form using Nodemailer
+- Easy navigation & reusable components
+
+---
+
+##  Live Portfolio
+
+🔗 **Live Website:**  
+👉 *[(https://mustafa-web-portfolio.vercel.app/)]*
+
+---
+
+##  Run Locally
+
 ```bash
 npm install
 npm run dev
-```
-
 ## Contact
-Visitors can send me messages or emails directly through the portfolio.
 
-## Authorized By Raza Mustafa 
+Visitors can:
+
+Send messages via the Contact Form
+
+Reach out for hiring or collaboration via the Hire Me form
+
+All emails are delivered directly using EmailJS and Nodemailer.
+
+ ##Author
+
+#Muhammad Raza Mustafa
+Web Application Developer / MERN Stack Developer
