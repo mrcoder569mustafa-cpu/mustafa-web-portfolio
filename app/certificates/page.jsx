@@ -25,38 +25,44 @@ const certificatesData = {
   ],
   technical: [
     {
-      title: "Aptech Diploma",
+      title: "Semester 1: CPIM (Certificate in Programming & Information Systems Management)",
       img: "/Assets/certificate_image/sem-1.jpg",
       desc: "Mastered utility-first design patterns with responsive UI."
     },
     {
-      title: "Aptech Diploma",
+      title: "Semester 2: DISM (Diploma in Information Systems Management)",
       img: "/Assets/certificate_image/semester2.jpg",
       desc: "Developed scalable backend APIs with Node & Express."
     },
     {
-      title: "Aptech Diploma",
+      title: "Semester 3: HDSE–I (Higher Diploma in Software Engineering – Part 1)",
       img: "/Assets/certificate_image/semester3.jpg",
       desc: "Learned data modeling and aggregation pipeline in MongoDB."
     },
     {
-      title: "Aptech Diploma",
+      title: "Semester 4: HDSE–II (Higher Diploma in Software Engineering – Part 2)",
       img: "/Assets/certificate_image/semester4.jpg",
       desc: "Completed UI/UX fundamentals including modern design systems."
     },
     {
-      title: "Full Stack Web Dev",
+      title: "ADSE–I (Advance Diploma in Software Engineering – Part 1)",
       img: "/Assets/certificate_image/semester5.jpg",
       desc: "End-to-end full stack development experience with MERN."
+    },
+     {
+      title: "ADSE–II (Advance Diploma in Software Engineering – Part 2)",
+      img: "/Assets/certificate_image/semester'6.jpg",
+      desc: "Final semester of Aptech Software Engineering Diploma is in completed;"
     },
     {
       title: "Attendance",
       img: "/Assets/certificate_image/Attend.jpg",
       desc: "Learned client communication & professional project delivery."
     },
-    {
-      title: "Software Engineering Diploma - Aptech (In Progress)",
-      img: "/Assets/Images/pending.avif",
+   
+     {
+      title: "Diploma in Software Engineering (ADSE)– Completed ",
+      img: "/Assets/certificate_image/Canvocation.jpg",
       desc: "Final semester of Aptech Software Engineering Diploma is in progress; certificate will be issued upon successful completion."
     },
   ],
